@@ -94,5 +94,5 @@ entities = (("house","", "that Jack built"),("malt", "lay in"),("rat","ate"),("c
 
 result_str = ""
 for i in range(len(entities)-1):
-    print(f"This is the {entities[i][0]} {entities[i][2] if len(entities[i]) == 3 else ''}, \n{result_str}")
+    print(f"This is the {entities[i][0]}{entities[i][2] if len(entities[i]) == 3 else ''}, \n{result_str}")
     result_str = f"That {entities[i+1][1]} the {entities[i][0]}{entities[i][2] if len(entities[i]) == 3 else ''}, \n{result_str}"
