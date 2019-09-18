@@ -7,11 +7,6 @@ For those who are already familiar with Python – write the best code you can t
 
 """
 
-
-
-
-import numpy as np
-
 poem = '''
 This is the house that Jack built.
 
@@ -92,36 +87,12 @@ That lay in the house that Jack built.
 '''
 
 
-entities = (("house","", " that Jack built"),("malt", "lay in"),("rat","ate"),("cat","kill'd"),("dog","worried"),
+entities = (("house","", "that Jack built"),("malt", "lay in"),("rat","ate"),("cat","kill'd"),("dog","worried"),
             ("cow","toss'd"," with the crumpled horn"), ("maiden","milk'd"," all forlorn"),
-            ("man","kissed"," all tatter'd and torn"), ("priest","married"," all shaven and shorn"),
-            ("cock","waked"," that crow'd in the morn"), ("farmer","kept"," sowing his corn"), ("","") )
+            ("man","kissed","all tatter'd and torn"), ("priest","married","all shaven and shorn"),
+            ("cock","waked","that crow'd in the morn"), ("farmer","kept","sowing his corn"), ("",""))
 
-
-
-#print(entities)
 result_str = ""
-str = ""
 for i in range(len(entities)-1):
-    print("This is the " + entities[i][0] + (entities[i][2] if len(entities[i]) == 3 else "") + "\n" + result_str)
-    result_str = "That " + entities[i+1][1] + " the " + entities[i][0] + \
-                 (entities[i][2] if len(entities[i]) == 3 else "") + "\n" + result_str
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    print(f"This is the {entities[i][0]} {entities[i][2] if len(entities[i]) == 3 else ''}, \n{result_str}")
+    result_str = f"That {entities[i+1][1]} the {entities[i][0]}{entities[i][2] if len(entities[i]) == 3 else ''}, \n{result_str}"
